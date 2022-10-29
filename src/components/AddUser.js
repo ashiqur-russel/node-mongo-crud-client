@@ -19,9 +19,7 @@ const AddUser = () => {
         res.json();
       })
       .then((data) => {
-        if (data.acknowledged) {
-          alert("User added successfully");
-        }
+        alert("User added successfully");
       })
       .catch((err) => {
         console.log("Error:", err);
