@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const Home = () => {
   const userData = useLoaderData();
@@ -50,7 +50,9 @@ const Home = () => {
                 >
                   Delete
                 </button>
-                <button className="button_update">Update</button>
+                <Link to={`/update/${user._id}`}>
+                  <button className="button_update">Update</button>
+                </Link>{" "}
               </td>
             </tr>
           </tbody>
